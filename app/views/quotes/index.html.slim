@@ -1,0 +1,8 @@
+= turbo_stream_from "quotes"
+.flex.flex-col.bg-white
+  .flex.flex-row.justify-between.w-full.items-center.py-5
+    .text-3xl.text-bold Quotes
+    = link_to "Add quote", [:new, :quote], data: {turbo_frame: "new_quote"}, class: "btn-primary"
+  = turbo_frame_tag "new_quote"
+  = turbo_frame_tag :quotes do
+    = render @quotes

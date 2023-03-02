@@ -76,6 +76,9 @@
   .btn-secondary{
     @apply inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-1.5 px-4 rounded focus:outline-1;
   }
+  .btn-danger{
+    @apply inline-block bg-red-500 hover:bg-red-700 text-white font-bold py-1.5 px-4 rounded focus:outline-1;
+  }
   .card {
     @apply flex flex-col bg-white shadow-md p-5 mb-4 space-y-2
   }
@@ -98,7 +101,7 @@
     display: block;
   }
   .card-inline{
-    @apply flex flex-row w-full items-center border border-gray-300 bg-white shadow-md p-0 mb-2 space-x-2
+    @apply flex flex-row w-full items-center border border-gray-300 bg-white rounded-md shadow-md p-2 mb-2 space-x-2
   }  
 }
 

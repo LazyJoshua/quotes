@@ -1,0 +1,5 @@
+.flex.flex-col
+  h1.head1 New quote
+  = turbo_frame_tag @quote do
+    - unless params[:cancel]
+      = render "form"
