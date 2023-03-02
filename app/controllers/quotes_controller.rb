@@ -3,15 +3,15 @@ class QuotesController < ApplicationController
   before_action :set_quote, only: [:edit, :update, :show, :destroy]
 
   def index
-    @quotes = Quote.order(id: "desc")
+    @quotes = current_company.quotes.order(id: "desc")
   end
 
   def new
-    @quote = Quote.new
+    @quote = current_company.quotes.new
   end
 
   def create
-    @quote = Quote.new(quote_params)
+    @quote = current_company.quotes.new(quote_params)
     unless @quote.save
       render :new, status: :unprocessable_entity
     end
@@ -42,7 +42,7 @@ class QuotesController < ApplicationController
   
 
   def set_quote
-    @quote = Quote.find(params[:id])
+    @quote = current_company.quotes.find(params[:id])
   end
   
 

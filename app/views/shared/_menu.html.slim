@@ -1,0 +1,13 @@
+ul.menu
+  - if user_signed_in?
+    li = link_to "Quotes", quotes_path
+    li.dropdown
+      a.inline-flex.items-center
+        span.mr-1 = current_user.name
+        svg.fill-current.h-4.w-4[xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"]
+          path[d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"]
+      ul.dropdown-menu.bg-slate-50.p-2.w-full.border-t
+        li.p-2
+          = button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false }
+  - else
+    li = link_to "Login", new_user_session_path
