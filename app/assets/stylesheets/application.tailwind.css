@@ -2,12 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+@layer base {
+  a{
+    @apply text-blue-500
   }
 }
+@layer components {
+  h1.title{
+    @apply text-2xl text-gray-700
+  }
+  .head1{
+    @apply text-2xl text-gray-700 py-5
+  }
+  .head2{
+    @apply text-lg text-gray-600
+  }
+  .head3{
+    @apply text-gray-500 text-base font-bold
+  }
+  ul.menu{
+    @apply h-full;
+  }  
+  ul.menu > li{
+    @apply h-full inline-block;
+  }
+  ul.menu > li >  a{
+    @apply h-full flex items-center justify-center px-4 cursor-pointer;
+  }
+  ul.menu > li:hover{
+    @apply bg-slate-50;
+  }
+  ul.menu > li button{
+    @apply text-blue-600 font-normal p-0 m-0 bg-none hover:bg-transparent;
+  }
+  table{
+    @apply w-full text-sm text-left text-gray-500 ;
+  }
+  table thead{
+    @apply text-xs text-gray-700 uppercase bg-gray-100 dark:text-gray-400 border-b border-t;
+  }
+  table tbody tr:nth-child(2n+1){
+    @apply bg-white border-b;
+  }
+  table tbody tr:nth-child(2n){
+    @apply border-b bg-gray-50;
+  }
+  table tr th, table tr td{
+    @apply p-3;
+  }
+  .simple_form{
+    @apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4;
+  }
+  .simple_form .input{
+    @apply py-2;
+  }
+  .simple_form .input label{
+    @apply block text-gray-500 text-sm font-bold mb-1;
+  }
+  .simple_form .input input:not(.radio_buttons):not(.boolean), 
+  .simple_form .input select{
+    @apply shadow appearance-none border rounded w-full p-2 text-gray-700 leading-tight focus:outline-1;
+  }
+  .simple_form .input input.boolean{
+    @apply mr-2;
+  }
+  button,
+  input[type='submit']{
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-1.5 px-4 rounded focus:outline-1;
+  }
+  .btn-primary{
+    @apply inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-1.5 px-4 rounded focus:outline-1;
+  }
+  .btn-secondary{
+    @apply inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-1.5 px-4 rounded focus:outline-1;
+  }
+  .card {
+    @apply flex flex-col bg-white shadow-md p-5 mb-4 space-y-2
+  }
+  .card h3{
+    @apply text-gray-500 text-base font-bold mb-1
+  }
+  .card .item{
+    @apply flex flex-row space-x-3
+  }
+  .card .action{
+    @apply flex flex-row space-x-2 text-blue-500
+  }
+  .dropdown{
+    @apply inline-block relative;
+  }
+  .dropdown .dropdown-menu{
+    @apply absolute hidden pt-1 rounded;
+  }
+  .dropdown:hover .dropdown-menu{
+    display: block;
+  }
+  .card-inline{
+    @apply flex flex-row w-full items-center border border-gray-300 bg-white shadow-md p-0 mb-2 space-x-2
+  }  
+}
 
-*/
+

@@ -51,9 +51,18 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "devise"
+gem "slim-rails", "~> 3.5", ">= 3.5.1"
+gem "simple_form"
+gem "country_select"
+gem "pundit", "~> 2.3"
+gem "ransack"
+gem 'pagy', '~> 6.0', '>= 6.0.2'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "awesome_print"
 end
 
 group :development do
