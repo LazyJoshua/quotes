@@ -14,16 +14,16 @@ module.exports = {
       },
       keyframes: {
         'fade-out': {
-          'from': {
-            opacity: '1'
-          },
-          'to': {
+          '0%, 100%': {
             opacity: '0'
           },
+          '5%, 60%': {
+            opacity: '1'
+          }
         },
       },
       animation: {
-        'fade-out': 'fade-out 3s ease-out'
+        'fade-out': 'fade-out 3s ease-in-out'
       }
     },
   },
