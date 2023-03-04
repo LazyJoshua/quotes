@@ -20,6 +20,7 @@ html[lang="en"]
             a.text-2xl.text-black-700[href="/"]
               | Quotes
             = render 'shared/menu'
-    = render "layouts/flash"
+    #flash.flash
+      = render "layouts/flash"
     .px-10.py-5.container.mx-auto
       = yield
