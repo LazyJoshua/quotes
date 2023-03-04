@@ -4,3 +4,5 @@
     = link_to "edit", edit_quote_path(quote), class: "btn-primary"
     = link_to "delete", quote_path(quote),
        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger"
+    / = button_to "delete", quote_path(quote), method: :delete,
+    /    data: {turbo: false}, class: "btn-danger"
