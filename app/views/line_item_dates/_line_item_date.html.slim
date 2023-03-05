@@ -1,0 +1,6 @@
+.card-inline
+  .text-gray-800.grow = l(line_item_date.date, format: :long)
+  = link_to "edit", [:edit, quote, line_item_date], class: "btn-primary"
+  = button_to "delete", [quote, line_item_date], 
+      method: :delete, class: "btn-danger",
+      form: {data: {turbo_confirm: "Are you sure?"}}

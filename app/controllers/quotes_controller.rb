@@ -23,7 +23,7 @@ class QuotesController < ApplicationController
   end
 
   def show
-    
+    @line_item_dates = @quote.line_item_dates.order(date: "asc")
   end
   
   def edit

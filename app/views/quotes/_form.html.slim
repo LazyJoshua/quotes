@@ -1,8 +1,9 @@
+= form_error_notification(@quote)
 = simple_form_for @quote, defaults: {label: false, error: false}, html: {class: "card-inline"} do |f|
   = f.input :name, placeholder: "Name of your quote", wrapper_html: {class: "grow"}
-  - if @quote.persisted?
-    = link_to "cancel", quote_path(@quote), class: "btn-primary"
-  - else
+  / - if @quote.persisted?
+  /   = link_to "cancel", quote_path(@quote), class: "btn-primary"
+  / - else
     / = link_to "cancel", new_quote_path(cancel: true), class: "btn-primary"
-    = link_to "cancel", quotes_path
+  = link_to "cancel", quotes_path
   = f.submit

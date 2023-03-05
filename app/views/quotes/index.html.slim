@@ -5,5 +5,5 @@
     = link_to "Add quote", [:new, :quote], data: {turbo_frame: "new_quote"}, class: "btn-primary"
   = turbo_frame_tag "new_quote" do
   = turbo_frame_tag :quotes do
-    = render "quotes/empty_state"
+    = render "empty_state"
     = render @quotes

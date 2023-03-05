@@ -1,2 +1,5 @@
-= turbo_frame_tag @quote do 
- = render @quote
+.flex.flex-col.bg-white
+  .flex.flex-row.justify-between.w-full.items-center.py-5
+    .text-3xl.text-bold = @quote.name
+    = link_to "Add date", new_quote_line_item_date_path(@quote), class: "btn-primary"
+  = render @line_item_dates, quote: @quote

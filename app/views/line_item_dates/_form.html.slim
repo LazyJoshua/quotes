@@ -1,0 +1,5 @@
+= form_error_notification(line_item_date)
+= simple_form_for [quote, line_item_date], defaults: {label: false, error: false}, html: {class: "card-inline"} do |f|
+  = f.input :date, html5: true, input_html: { autofocus: true }, wrapper_html: {class: "grow"}
+  = link_to "cancel", quote_path(quote), class: "btn-primary"
+  = f.submit
