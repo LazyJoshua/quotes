@@ -3,5 +3,6 @@
   - if @quote.persisted?
     = link_to "cancel", quote_path(@quote), class: "btn-primary"
   - else
-    = link_to "cancel", new_quote_path(cancel: true), class: "btn-primary"
+    / = link_to "cancel", new_quote_path(cancel: true), class: "btn-primary"
+    = link_to "cancel", quotes_path
   = f.submit

@@ -3,6 +3,8 @@
   .flex.flex-row.justify-between.w-full.items-center.py-5
     .text-3xl.text-bold Quotes
     = link_to "Add quote", [:new, :quote], data: {turbo_frame: "new_quote"}, class: "btn-primary"
-  = turbo_frame_tag "new_quote"
+  = turbo_frame_tag "new_quote" do
+    - if @quotes.none?
+      = render "quotes/empty_state"
   = turbo_frame_tag :quotes do
     = render @quotes

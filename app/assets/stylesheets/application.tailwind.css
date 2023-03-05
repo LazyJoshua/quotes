@@ -108,7 +108,13 @@
   }
   .flash-message{
     @apply animate-fade-out w-max text-sm text-white p-3 bg-slate-800 rounded-3xl
-  }  
+  }
+  .empty-state{
+    @apply p-4 border-2 border-gray-400 border-dashed rounded-xl text-center
+  }
+  .empty-state-text{
+    @apply text-lg text-gray-600 mb-4 font-bold
+  }
 }
 
 
